@@ -1,0 +1,27 @@
+[package]
+name = "serde_rdf"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/subotic/serde-rdf"
+repository = "https://github.com/subotic/serde-rdf"
+documentation = "https://github.com/subotic/serde-rdf"
+readme = "README.md"
+description = "A Rust library that simplifies the serialization and deserialization of Rust data structures to and from RDF using the widely-used Serde framework."
+authors = ["Ivan Subotic <i@subotic.ch>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+rio_api = { version = "0.8.4", features = [] }
+rio_turtle = { version = "0.8.4", features = [] }
+rio_xml = { version = "0.8.4", features = [] }
+
+[[example]]
+name = "serialize"
+test = true
+
+[[example]]
+name = "deserialize"
+test = true
